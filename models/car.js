@@ -1,15 +1,11 @@
-class Car {
+const mongoose = require("mongoose");
 
-    brand;
-    model;
-    year;
+const carSchema = {
+    brand: "String",
+    model: "String",
+    year: "Number"
+};
 
-    constructor(car){
-        this.brand = car.brand;
-        this.model = car.model;
-        this.year = car.year;
-    }
-
-}
+const Car = mongoose.model("Car", carSchema);
 
 module.exports = Car;
